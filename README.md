@@ -1,4 +1,8 @@
-# Music Store Analysis-in MYSQL
+# Music Store Analysis in MYSQL
+![image](https://github.com/user-attachments/assets/b18e3bd5-d72d-480c-ae6c-2294c5a68730)
+
+MySQL is a fast easy-to-use Relational Database Management System ( RDBMS ), which enables us to implement a database with tables, columns and indexes.
+The database allows users to manipulate data using structural query language ( SQL ). SQL is the most popular language for adding, accessing and managing content in a database. Data is stored in tables and within tables, it’s stored in rows.  
 # Introduction
 This project is for beginners and will teach you how to analyze the music playlist database. You can examine the dataset with SQL and help the store understand its business growth by answering simple questions.
 
