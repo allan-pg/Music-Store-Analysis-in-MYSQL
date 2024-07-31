@@ -12,6 +12,7 @@ The database allows users to manipulate data using structural query language ( S
 1.4 Part 1 - Easy Questions  
 1.5 Part 2 - Moderate Questions  
 1.6 Part 3 - Advanced Queries  
+1.7 References  
 
 # 1.0 Introduction
 This project is for beginners and will teach you how to analyze the music playlist database. You can examine the dataset with SQL and help the store understand its business growth by answering simple questions.
@@ -161,7 +162,7 @@ WITH Customter_with_country AS (
    		ORDER BY 4 ASC,5 DESC)
 SELECT * FROM Customter_with_country WHERE RowNo <= 1;
 ```
-## References
+## 1.7 References
 
 ***www.youtube.com/@RishabhMishraOfficial***  
 ***Thank You :)***
