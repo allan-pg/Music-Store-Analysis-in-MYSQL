@@ -3,7 +3,10 @@
 
 MySQL is a fast easy-to-use Relational Database Management System ( RDBMS ), which enables us to implement a database with tables, columns and indexes.
 The database allows users to manipulate data using structural query language ( SQL ). SQL is the most popular language for adding, accessing and managing content in a database. Data is stored in tables and within tables, it’s stored in rows.  
-# Introduction
+# Table Of Contents 
+1.0 Introduction  
+
+# 1.0 Introduction
 This project is for beginners and will teach you how to analyze the music playlist database. You can examine the dataset with SQL and help the store understand its business growth by answering simple questions.
 
 ## Database and Tools
