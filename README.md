@@ -7,4 +7,6 @@ This project is for beginners and will teach you how to analyze the music playli
 - PgAdmin4
 
 ## Data Modelling
-https://user-images.githubusercontent.com/112153548/213707717-bfc9f479-52d9-407b-99e1-e94db7ae10a3.png
+Schema - Music Store Database
+![image](https://github.com/user-attachments/assets/dc513813-421c-4be9-92ec-c0a30a2c45f7)
+
