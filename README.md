@@ -153,5 +153,5 @@ SELECT * FROM Customter_with_country WHERE RowNo <= 1;
 ```
 ## References
 
-/* source: www.youtube.com/@RishabhMishraOfficial */ */
-/* Thank You :) */
+***source: www.youtube.com/@RishabhMishraOfficial***
+***Thank You :)***
