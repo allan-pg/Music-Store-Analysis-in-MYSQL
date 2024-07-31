@@ -21,5 +21,27 @@ Lets dive into our SQL questions to solve. The quiz is arranged in form of:-
 - Easy
 - Moderate
 - Hard
+## Solved Questions
+1.Who is the senior most employee based on job title? 
+```
+select * from employee
+where reports_to is null;
+```
 
+2. Which countries have the most Invoices?
+```
+select billing_country, count(invoice_id) as number_of_invoices
+from invoice
+group by billing_country
+order by count(invoice_id) desc;
+```
+
+3. What are top 3 values of total invoice?
+```
+select *
+from invoice
+order by total desc
+limit 3;
+```
+ 
 
