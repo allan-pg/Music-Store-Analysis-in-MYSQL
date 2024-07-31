@@ -2,30 +2,37 @@
 ![image](https://github.com/user-attachments/assets/b18e3bd5-d72d-480c-ae6c-2294c5a68730)
 
 MySQL is a fast easy-to-use Relational Database Management System ( RDBMS ), which enables us to implement a database with tables, columns and indexes.
-The database allows users to manipulate data using structural query language ( SQL ). SQL is the most popular language for adding, accessing and managing content in a database. Data is stored in tables and within tables, it’s stored in rows.  
+The database allows users to manipulate data using structural query language ( SQL ). SQL is the most popular language for adding, accessing and managing content in a database. Data is stored in tables and within tables, it’s stored in rows. 
+
 # Table Of Contents 
 1.0 Introduction  
+1.1 Database and Tools  
+1.2 Data Modelling   
+1.3 Music store Data analysis  
+1.4 Part 1 - Easy Questions  
+1.5 Part 2 - Moderate Questions  
+1.6 Part 3 - Advanced Queries  
 
 # 1.0 Introduction
 This project is for beginners and will teach you how to analyze the music playlist database. You can examine the dataset with SQL and help the store understand its business growth by answering simple questions.
 
-## Database and Tools
+## 1.1 Database and Tools
 - Postgre SQL
 - PgAdmin4
 
-## Data Modelling  
+## 1.2 Data Modelling  
 Schema - Music Store Database  
 
 ![image](https://github.com/user-attachments/assets/dc513813-421c-4be9-92ec-c0a30a2c45f7)
 
-## Music store Data analysis 
+## 1.3 Music store Data analysis 
 I analysed music store database and came up with important findings from our database  
 Lets dive into our SQL questions to solve. The quiz is arranged in form of:-
 - Easy
 - Moderate
 - Hard
 ## Solved Questions
-## Part 1 - Easy Questions
+## 1.4 Part 1 - Easy Questions
 1.Who is the senior most employee based on job title? 
 ```
 select * from employee
@@ -66,7 +73,7 @@ group by c.customer_id
 order by expenditure desc
 limit 1;
 ```
-## Part 2 - Moderate Questions 
+## 1.5 Part 2 - Moderate Questions 
 1. Write query to return the email, first name, last name, & Genre of all Rock Music listeners. Return your list ordered alphabetically by email starting with A
 ```
 select C.email, c.first_name, c.last_name
@@ -104,7 +111,7 @@ where milliseconds > (
 )
 order by milliseconds desc;
 ```  
-## Part 3 - Advanced Queries
+## 1.6 Part 3 - Advanced Queries
 1. Find how much amount spent by each customer on artists? Write a query to return customer name, artist name and total spent
 ```
 select c.customer_id,
