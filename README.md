@@ -11,6 +11,8 @@ Schema - Music Store Database
 
 ![image](https://github.com/user-attachments/assets/dc513813-421c-4be9-92ec-c0a30a2c45f7)
 
+## Music store Data analysis 
+I analysed music store database and came up with important findings from our database  
 Lets dive into our SQL questions to solve. The quiz is arranged in form of:-
 - Easy
 - Moderate
