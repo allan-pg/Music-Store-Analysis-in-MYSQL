@@ -80,8 +80,7 @@ where milliseconds > (
 order by milliseconds desc;
 
 -- -------------------Adavnced Questions--------------------------------------
---1. find how much money spent by customers on artists? Write a query to return
--- customer name, artist name and total spent
+/* Q1: Find how much amount spent by each customer on artists? Write a query to return customer name, artist name and total spent */
 select c.customer_id,
  	   c.first_name,
        artist.name,    
@@ -96,8 +95,10 @@ group by c.customer_id,artist.name,i.total
 order by total desc;
 
 
---2. We want to find most popular genre for each country. We determine the most popular 
--- genre as genre with the highest amount of purchases
+/* Q2: We want to find out the most popular music Genre for each country. We determine the most popular genre as the genre 
+with the highest amount of purchases. Write a query that returns each country along with the top Genre. For countries where 
+the maximum number of purchases is shared return all Genres. */
+
 WITH RECURSIVE
 	sales_per_country AS(
 		SELECT COUNT(*) AS purchases_per_genre, customer.country, genre.name, genre.genre_id
@@ -119,9 +120,9 @@ FROM sales_per_country
 JOIN max_genre_per_country ON sales_per_country.country = max_genre_per_country.country
 WHERE sales_per_country.purchases_per_genre = max_genre_per_country.max_genre_number;
 
---3. Write a query to output the customer that spent the most on music for each country
--- write a query to output/return country and the customer who spent the most and how much they spent
--- For countries where amount is shared by two top users provide all customers who spent
+/* Q3: Write a query that determines the customer that has spent the most on music for each country. 
+Write a query that returns the country along with the top customer and how much they spent. 
+For countries where the top amount spent is shared, provide all customers who spent this amount. */
 
 -- use a cte
 WITH Customter_with_country AS (
