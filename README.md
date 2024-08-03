@@ -1,8 +1,6 @@
 # Music Store Analysis in MYSQL
 ![image](https://github.com/user-attachments/assets/774a4402-5c96-45dc-8a9f-7b9a7dfe7fdf)
 
-![image](https://github.com/user-attachments/assets/e3b9c539-dbfc-434c-b085-66cf4d0aa689)
-
 MySQL is a fast easy-to-use Relational Database Management System ( RDBMS ), which enables us to implement a database with tables, columns and indexes.
 The database allows users to manipulate data using structural query language ( SQL ). SQL is the most popular language for adding, accessing and managing content in a database. Data is stored in tables and within tables, it’s stored in rows. 
 
