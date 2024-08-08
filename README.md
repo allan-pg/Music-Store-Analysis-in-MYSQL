@@ -106,10 +106,7 @@ limit 10;
  ```
 select name, milliseconds
 from track
-where milliseconds > (
-	  select avg(milliseconds)
-	  from track
-)
+where milliseconds > avg(milliseconds)
 order by milliseconds desc;
 ```  
 ## 1.6 Part 3 - Advanced Queries
