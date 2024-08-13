@@ -35,13 +35,13 @@ Lets dive into our SQL questions to solve. The quiz is arranged in form of:-
 ## Solved Questions
 ## 1.4 Part 1 - Easy Questions
 1.Who is the senior most employee based on job title? 
-```
+```sql
 select * from employee
 where reports_to is null;
 ```
 
 2. Which countries have the most Invoices?
-```
+```sql
 select billing_country, count(invoice_id) as number_of_invoices
 from invoice
 group by billing_country
@@ -49,7 +49,7 @@ order by count(invoice_id) desc;
 ```
 
 3. What are top 3 values of total invoice?
-```
+```sql
 select *
 from invoice
 order by total desc
@@ -57,7 +57,7 @@ limit 3;
 ```
 4. Which city has the best customers? We would like to throw a promotional Music Festival in the city we made the most money. Write a query that returns one city that has the 
    highest sum of invoice totals. Return both the city name & sum of all invoice totals.
-```
+```sql
 select billing_city, sum(total) as total_sum
 from invoice
 group by billing_city
@@ -65,7 +65,7 @@ order by total_sum desc
 limit 1;
 ```
 5. Who is the best customer? The customer who has spent the most money will be declared the best customer. Write a query that returns the person who has spent the most money
-```
+```sql
 select c.customer_id, 
       c.first_name, c.last_name, sum(i.total) as expenditure
 from customer c
@@ -76,7 +76,7 @@ limit 1;
 ```
 ## 1.5 Part 2 - Moderate Questions 
 1. Write query to return the email, first name, last name, & Genre of all Rock Music listeners. Return your list ordered alphabetically by email starting with A
-```
+```sql
 select C.email, c.first_name, c.last_name
 from customer c
 inner join invoice using(customer_id)
@@ -87,7 +87,7 @@ where g.genre_id = '1'
 order by email asc;
 ```
 2. Let's invite the artists who have written the most rock music in our dataset. Write a query that returns the Artist name and total track count of the top 10 rock bands
-```
+```sql
 select a.artist_id, a.name, count(a.artist_id) as total_truck
 from artist a
 inner join album using(artist_id)
@@ -103,7 +103,7 @@ limit 10;
 ```  
 3. Return all the track names that have a song length longer than the average song length. Return the Name and Milliseconds for each track. Order by the song length with the 
    longest songs listed first
- ```
+ ```sql
 select name, milliseconds
 from track
 where milliseconds > avg(milliseconds)
@@ -111,7 +111,7 @@ order by milliseconds desc;
 ```  
 ## 1.6 Part 3 - Advanced Queries
 1. Find how much amount spent by each customer on artists? Write a query to return customer name, artist name and total spent
-```
+```sql
 select c.customer_id,
  	   c.first_name,
        artist.name,    
@@ -127,7 +127,7 @@ order by total desc;
 ```
 2. We want to find out the most popular music Genre for each country. We determine the most popular genre as the genre with the highest amount of purchases. Write a query 
    that returns each country along with the top Genre. For countries where the maximum number of purchases is shared return all Genres
-```
+```sql
 WITH RECURSIVE sales_per_country AS(
 		SELECT COUNT(*) AS purchases_per_genre, customer.country, genre.name, genre.genre_id
 		FROM invoice_line
@@ -149,7 +149,7 @@ JOIN max_genre_per_country ON sales_per_country.country = max_genre_per_country.
 WHERE sales_per_country.purchases_per_genre = max_genre_per_country.max_genre_number;
 ```
 3. Write a query that determines the customer that has spent the most on music for each country. Write a query that returns the country along with the top customer and how much they spent. For countries where the top amount spent is shared, provide all customers who spent this amount
-```
+```sql
 WITH Customter_with_country AS (
 		   SELECT customer.customer_id,first_name,last_name,billing_country,SUM(total) AS total_spending,
 	    ROW_NUMBER() OVER(PARTITION BY billing_country ORDER BY SUM(total) DESC) AS RowNo 
